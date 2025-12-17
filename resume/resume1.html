@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="rstyle1.css">
+<title>resume</title>
+<link type="image/png" sizes="16x16" rel="icon" href="favicon.png">
+</head>
+	<body>
+<div class="contents">
+	<a id="C4">overview</a>
+	<a id="C5">experience</a>
+	<a id="C6">school</a>
+	<a id="C7">skills</a>
+	<a id="C8">awards & programs</a>
+	<a href="mailto:serah.ep2012@gmail.com">contact me</a>
+	</div>
+<div class= "rest">	<div class="name"><h1 class="big">Serah</h1><h1 class="me">High School Student & Freelance Tutor</h1></div>
+	<div class="overview">
+		<div class="pfp"><img src="profile.png" alt=""></div>
+		<div class="txt">
+			<h1 id="C4">Overview</h1>
+			<p>Motivated high school student with experience in freelance tutoring and exposure to IT tasks through assisting at school events, eager to gain more experience in teaching.</p>
+		</div>
+	</div>
+	<div class="exp">
+		<div class="card">
+			<div class="txt">
+		<h1 class="exp1" id="C5">Working Experience</h1>
+</div>
+			</div>
+		<div class="card">
+			<div class="pfp"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOSKl3wbK-H9Qr61mdssFfxuoiuHeOz7Vr1A&s" alt=""></div>
+			<div class="txt">
+		<h1>Freelance Tutor (Self-employed), Melbourne VIC</h1>
+		<p>OCTOBER 2025 - PRESENT<ul>
+<li>Provide personalised English tutoring</li>
+<li>Create detailed PowerPoint presentations that tailor to individual student needs</li>
+<li>Track progress and adjust teaching methods to aid in understanding</li>
+<li>Utilise the 4 stages of competence framework to guide skill development</li>
+<li>Communicate progress with students and parents regularly</li>
+</ul></p>
+			</div>
+	</div>
+	<div class="card">
+		<div class="pfp"><img src="https://png.pngtree.com/png-vector/20210205/ourmid/pngtree-pc-icon-png-image_2887681.jpg" alt=""></div>
+					<div class="txt">
+				<h1>Volunteer IT Support, Doncaster Secondary College, Melbourne VIC </h1>
+<p>OCCASIONAL (2024-2025)
+<ul><li>Assisted with IT during a school event</li>
+<li>Helped troubleshoot basic technical issues</li>
+<li>Coordinated delivery of technical resources</li>
+</ul></p>
+		</div>
+</div>
+		</div>
+	<div class="exp">
+		<div class="card">
+			<div class="txt">
+		<h1 class="exp1" id="C6">Education</h1>
+</div>
+			</div>
+		<div class="card">
+			<div class="pfp"><img src="https://corporatesignindustries.com.au/hs-fs/hubfs/boxhill_high_school-72-min-jpg.jpeg?width=6000&height=3999&name=boxhill_high_school-72-min-jpg.jpeg" alt=""></div>
+			<div class="txt">
+		<h1>Box Hill High School, Box Hill — Secondary Student</h1>
+		<p>January 2024 - December 2025<br>
+Relevant coursework: Mathematics, Science, English, Debating</p>
+			</div>
+	</div>
+	<div class="card">
+		<div class="pfp"><img src="https://content.api.news/v3/images/bin/4d7b73778ec9d3f9ac0483083234f1ce" alt=""></div>
+					<div class="txt">
+				<h1>Mac.Robertson Girls’ High School, Albert Park — Incoming Student</h1>
+<p>January 2026 - December 2029<br>
+Selective entry program with a focus on advanced challenges and collaboration.
+</p>
+		</div>
+</div>
+<section class="skills-section" id="C7">
+  <h1 class="section-title">Skills</h1>
+    <div class="slider">
+        <div class="skl"><h1>skills</h1></div>
+        <div class="skl"><h1>Basic coding</h1></div>
+        <div class="skl"><h1>Research Skills</h1></div>
+        <div class="skl"><h1>Trouble<br>shooting</h1></div>
+        <div class="skl"><h1>Public speaking</h1></div>
+        <div class="skl"><h1>Debating</h1></div>
+        <div class="skl"><h1>Tutoring</h1></div>
+        <div class="skl"><h1>Art</h1></div>
+        <div class="skl"><h1>Critical Thinking Skills</h1></div>
+        <div class="skl"><h1>Beginner Level German</h1></div>
+			<button id="prev"><</button>
+			<button id="next">></button>
+    </section>
+
+</div>
+<div class="app" id="C8">
+		<h1>Awards and Programs</h1></div>
+	<div class="ap">
+		<div class="awards">
+		<div class="ap1"><h1>awards</h1></div>
+		<div class="ap1"><h2>Academic Excellence</h2><p>2024, 2025</p></div>
+		<div class="ap1"><h2>2nd Place, Year 8 debating </h2><p>2025</p></div>
+		<div class="ap1"><h2>Reading Adventure Program Award</h2><p>2025</p></div>
+		</div>
+		
+			<div class="programs">
+		<div class="ap1"><h1>programs</h1></div>
+		<div class="ap1"><h2>VHAP</h2><p>mathematics, 2022 & 2024</p></div>
+		<div class="ap1"><h2>BioEyes science program</h2><p>2024</p></div>
+		<div class="ap1"><h2>QS tutoring Level 10 (English, Mathematics & Science)</h2><p>2025</p></div>
+</div>
+		</div>
+		
+
+		
+	</div>
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find elements (var is fine, but let is modern practice)
+        var skl = document.querySelectorAll('.slider .skl');
+        var next = document.getElementById('next');
+        var prev = document.getElementById('prev');
+
+        // Start active card at index 3 (4th card)
+        var active = 3; 
+
+        function loadShow(){
+            var stt = 0;
+            
+            // --- Reset/Set the Active Card ---
+            skl[active].style.transform = `none`;
+            skl[active].style.zIndex = 1; 
+            skl[active].style.filter = 'none';
+            skl[active].style.opacity = 1;
+
+            // --- Cards After Active (Right Side) ---
+            for(var i = active + 1; i < skl.length; i++){
+                stt++;
+                // FIX: Use backticks (`) for Template Literals
+                skl[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+                skl[i].style.zIndex = -stt; 
+                skl[i].style.filter = 'blur(5px)';
+                skl[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+            
+            stt = 0;
+            
+            // --- Cards Before Active (Left Side) ---
+            for(var i = active - 1; i>= 0; i--){
+                stt++;
+                // FIX: Use backticks (`) for Template Literals
+                skl[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+                skl[i].style.zIndex = -stt; 
+                skl[i].style.filter = 'blur(5px)';
+                skl[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+        }
+        
+        loadShow();
+        
+        next.onclick = function(){
+            // Logic to move to the next card, stopping at the end
+            active = active + 1 < skl.length ? active + 1 : skl.length - 1; 
+            loadShow();
+        }
+        
+        prev.onclick = function(){
+            // Logic to move to the previous card, stopping at the beginning
+            active = active - 1 >= 0 ? active - 1 : 0;
+            loadShow();
+        }
+    });	
+		document.addEventListener('DOMContentLoaded', function() {
+        // Find elements (var is fine, but let is modern practice)
+        var skl = document.querySelectorAll('.slider .skl');
+        var next = document.getElementById('next');
+        var prev = document.getElementById('prev');
+
+        // Start active card at index 3 (4th card)
+        var active = 3; 
+
+        function loadShow(){
+            var stt = 0;
+            
+            // --- Reset/Set the Active Card ---
+            skl[active].style.transform = `none`;
+            skl[active].style.zIndex = 1; 
+            skl[active].style.filter = 'none';
+            skl[active].style.opacity = 1;
+
+            // --- Cards After Active (Right Side) ---
+            for(var i = active + 1; i < skl.length; i++){
+                stt++;
+                // FIX: Use backticks (`) for Template Literals
+                skl[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+                skl[i].style.zIndex = -stt; 
+                skl[i].style.filter = 'blur(5px)';
+                skl[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+            
+            stt = 0;
+            
+            // --- Cards Before Active (Left Side) ---
+            for(var i = active - 1; i>= 0; i--){
+                stt++;
+                // FIX: Use backticks (`) for Template Literals
+                skl[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+                skl[i].style.zIndex = -stt; 
+                skl[i].style.filter = 'blur(5px)';
+                skl[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+        }
+        
+        loadShow();
+        
+        next.onclick = function(){
+            // Logic to move to the next card, stopping at the end
+            active = active + 1 < skl.length ? active + 1 : skl.length - 1; 
+            loadShow();
+        }
+        
+        prev.onclick = function(){
+            // Logic to move to the previous card, stopping at the beginning
+            active = active - 1 >= 0 ? active - 1 : 0;
+            loadShow();
+        }
+    });	
+</script>
+</body>
+</html>

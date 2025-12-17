@@ -1,0 +1,321 @@
+/* CSS Document */
+body{margin:0; padding:0; background-color: #02041D; overflow-x: hidden;}
+p, li{font-family: arial, sans-serif; font-size: 20px;	color: #AAC1CB;}
+h1, h2 {
+    font-family: arial, sans-serif; /* Added generic fallback */
+    font-weight: bold; /* Correct property for bolding */
+    font-size: 40px;
+	color: #AAC1CB;
+}
+.contents{
+		overflow: hidden;
+	margin:0px;
+	padding:0px;
+	display: flex;
+	justify-content: space-evenly;
+	position: fixed;
+	width:100%;
+	background-color: #10051E;
+	z-index: 2;
+
+}
+.contents a{font-family: sans-serif;
+	padding: 20px;
+flex-wrap: wrap;
+align-items: center;
+color: #AAC1CB;
+transition: color 0.5s ease-in-out;
+}
+.contents a{
+	text-decoration: none;
+}
+
+.contents a:hover{
+color: #0A1F97;
+background-color: #061131;
+cursor:pointer;
+}
+.name{
+	width: 100%;
+    height: 600px;
+background-image: 
+        /* 1. The Gradient Layer: Fades from transparent (at 60% down) to the body color */
+        linear-gradient(to bottom, rgba(28, 12, 65, 0) 60%, #02041D 100%), 
+        
+        /* 2. The Original Image Layer */
+        url("https://i.pinimg.com/1200x/f2/32/2a/f2322a9b559ca425e574ec213ee4d08b.jpg");
+    overflow: hidden;
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start;/* Align horizontally (left) */
+	align-content: center;
+	/* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	gap: 50px;   
+}
+.big{font-family: arial, sans-serif; /* Added generic fallback */
+    font-weight: bold; /* Correct property for bolding */
+	color: #AAC1CB;
+	font-size: 100px;
+	align-self: center;
+	text-align: center;
+	padding:80px;
+	height: 350px;
+}
+.me{
+	margin-top: 20px;
+	padding: 110px;
+	display:inline; 
+	color: #AAC1CB;
+	height: auto;
+	width: 60%;
+	font-size: 40px;
+	font-weight: lighter;
+}
+@keyframes appear{
+	from {
+		opacity:0;
+		scale: 0.5;
+	}
+	to { 
+		opacity:1;
+		scale:1;
+	}
+}
+.overview{
+	margin-top:50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding:20px;
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	flex-direction: row;
+	gap: 50px;
+	background-color: #061131;
+	border-radius: 30px;
+	transition: box-shadow 0.3s ease-in-out;
+		animation: appear linear;
+	animation-timeline: view();
+	 animation-range: entry 0% cover 40%;
+}
+
+.overview:hover{box-shadow: 0 0 40px rgba(6, 17, 49, 0.5);
+}
+.exp1{
+align-self: center;
+text-align: center;
+ margin: 0 auto;
+}
+.pfp{
+	align-self: flex-start;
+	height:300px;
+	width:300px
+}
+
+.pfp img{ 	border-radius: 150px;
+height:100%;
+	width:100%;
+	transition: transform 0.3s ease-in-out;
+	will-change: transform;
+}
+.pfp img:hover{transform: scale(1.1);}
+.txt{
+	display:flex;
+	justify-content: flex-start;
+	align-content: space-between;
+	flex-direction: column;
+	width:70%;
+	padding-top:-100px;
+	padding-right:20px ;
+		padding-left:20px;
+}
+.rest{padding-top:50px;}
+@media (max-width : 926px ){
+}
+
+@media (max-width: 917px){
+}
+.exp{
+	margin:50px;
+	/* The height determines how long the card stays sticky */
+    height: 300vh; /* Example: 3 times the viewport height */
+    position: relative; /* Needs position for z-index to work */
+	background-color: #02041D;
+		border-radius: 30px;
+	transition: box-shadow 0.3s ease-in-out;
+}
+.card{
+	background-color: #061131;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: row;
+	gap: 50px;
+	border-radius: 30px;
+	position: sticky;
+    top: 60px;
+	/* Ensure the card itself is not too tall so you can scroll the content */
+    height: 70vh; /* The visible height of the card */
+	/* Make the content within the card scrollable */
+    overflow-y: auto; 
+    
+    /* Add box-shadow for layered effect */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+	padding:20px;
+}
+.slider{
+	/* FIX: Set positioning context for the buttons and cards */
+    position: relative;
+    
+	justify-content: center;
+	/* FIX: Set a large, fixed width to contain the off-center cards */
+	width: 100%; 
+    /* FIX: Center the slider container itself on the page */
+    margin-left: auto;
+    margin-right: auto;
+    
+	height:300px;
+	/* CRITICAL FIX: Allow cards to extend beyond the center */
+	overflow: visible;
+}
+.skl{
+	position:absolute;
+	width: 200px;
+	height: 250px;
+	/* CRITICAL FIX: Center the card vertically within the slider */
+	top: 50%;
+	text-align: justify;
+	background-color: #061131;
+	border-radius: 10px;
+	padding:20px;
+	transition:0.5s;
+	left: calc(50% - 110px);
+	transform: translateY(-50%);
+}
+#next, #prev{ 
+	position:absolute;
+	top:40%;
+	color: #fff;
+	background-color: transparent;
+	border:none;
+	font-size: xxx-large;
+	font-family: monospace;
+	font-weight: bold;
+	/* FIX: Sets the position for the #prev button */
+	left: 50px; 
+}
+
+/* Rule specifically for the #next button */
+#next{
+	left: unset;
+	right: 50px; /* Moves the #next button to the right side */
+}
+.app{margin-top: 800px;
+text-align: center;
+width: 100vw;}
+.ap{
+	width:98%;
+	gap:50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: center; 
+	align-content: center;
+	flex-direction: row;
+	transition: box-shadow 0.3s ease-in-out;
+		animation: appear linear;
+	animation-timeline: view();
+	 animation-range: entry 0% cover 40%
+}
+.awards, .programs{
+	display: flex;
+	justify-content: center;
+	border-radius: 30px;
+	align-items: center;
+	flex: 1;
+	gap: 20px;
+	position: relative;
+	margin-bottom: 50px;
+	height: 400px;
+	overflow: hidden;
+	justify-content: center;
+}
+.ap1{
+	background-color: #061131;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	border-radius: 30px;    
+    /* Add box-shadow for layered effect */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+	text-align: center;
+	height: 200px;
+	width: 250px;
+	position:absolute;
+    transform: translateX(-50%);
+	top: 0; 
+	font-size: 10em;   
+    /* CRITICAL: Ensure all cards start at the same center point */
+    transition: 0.5s;	
+  padding: 20px;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: verticalCarousel 12s linear infinite;
+}
+.awards .ap1:nth-child(1) { animation-delay: -3s; }
+.awards .ap1:nth-child(2) { animation-delay: 0s; }
+.awards .ap1:nth-child(3) { animation-delay: 3s; }
+.awards .ap1:nth-child(4) { animation-delay: 6s; }
+
+.programs .ap1:nth-child(1) { animation-delay: -3s; }
+.programs .ap1:nth-child(2) { animation-delay: 0s; }
+.programs .ap1:nth-child(3) { animation-delay: 3s; }
+.programs .ap1:nth-child(4) { animation-delay: 6s; }
+
+@keyframes verticalCarousel {
+  0% {
+    transform: translateY(120%) scale(0.6);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(60%) scale(0.8);
+    opacity: 0.4;
+  }
+
+  40% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(-60%) scale(0.8);
+    opacity: 0.4;
+  }
+
+  80% {
+    transform: translateY(-120%) scale(0.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-120%) scale(0.6);
+    opacity: 0;
+  }
+}
+.skills-section {
+  margin-top: 75px;
+  margin-bottom: 50px; /* creates space before Awards */
+  position: relative;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: -60px;
+  margin-top: 620px;
+}
